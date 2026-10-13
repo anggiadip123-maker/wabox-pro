@@ -17,7 +17,6 @@ if (keystorePropertiesFile.exists()) {
 android {
     namespace = "com.wabox.wabox_pro"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
