@@ -55,7 +55,7 @@ class _QrGeneratorScreenState extends State<QrGeneratorScreen> {
     final dir = await getTemporaryDirectory();
     final path = '${dir.path}/wabox_qr_${DateTime.now().millisecondsSinceEpoch}.png';
     final file = await File(path).writeAsBytes(bytes, flush: true);
-    await SharePlus.instance.share(ShareParams(files: [XFile(file.path)]));
+    await Share.shareXFiles([XFile(file.path)]);
   }
 
   @override

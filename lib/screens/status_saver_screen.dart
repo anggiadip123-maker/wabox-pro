@@ -30,7 +30,7 @@ class _StatusSaverScreenState extends State<StatusSaverScreen> {
 
   Future<void> _shareFile(PlatformFile f) async {
     if (f.path == null) return;
-    await SharePlus.instance.share(ShareParams(files: [XFile(f.path!)]));
+    await Share.shareXFiles([XFile(f.path!)]);
   }
 
   @override
